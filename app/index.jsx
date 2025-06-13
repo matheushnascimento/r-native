@@ -1,25 +1,32 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet } from "react-native";
 import { Link } from "expo-router";
 
-import Logo from "../assets/favicon.png";
+import ThemedCard from "@/components/ThemedCard";
+import ThemedView from "@/components/ThemedView";
+import ThemedLogo from "@/components/ThemedLogo";
+import Spacer from "@/components/Spacer";
+import ThemedText from "@/components/ThemedText";
 
 export default function Home() {
   return (
-    <View style={styles.container}>
-      <Image source={Logo} className="mx-5" />
-      <Text className="font-bold text-[18px]">The Number 1</Text>
-      <Text className="mt-[10px] mb-[30px]">Reading List App</Text>
-      <View className="bg-[#eee] p-5  mb-7 rounded-md shadow-[4px_4px_rgba(0,0,0,0.1)]">
-        <Text>Hello, this is a card.</Text>
-        <Text className="text-red-500">Testing nativewind.</Text>
-      </View>
+    <ThemedView style={styles.container}>
+      <Spacer />
+      <ThemedLogo />
+      <Spacer />
+      <ThemedText className="font-bold text-[18px] ">The Number 1</ThemedText>
+      <ThemedText>Reading List App</ThemedText>
+      <Spacer />
+      <ThemedCard className="mb-7 rounded-md ">
+        <ThemedText>Hello, this is a card.</ThemedText>
+        <ThemedText className="text-black">Testing nativewind.</ThemedText>
+      </ThemedCard>
       <Link href="/about" className="mx-2 border-b-[1px]">
-        About Page
+        <ThemedText>About Page</ThemedText>
       </Link>
       <Link href="/contact" className="mx-2 border-b-[1px]">
-        Contact Page
+        <ThemedText>Contact Page</ThemedText>
       </Link>
-    </View>
+    </ThemedView>
   );
 }
 

@@ -2,17 +2,22 @@ import { StyleSheet, Text, useColorScheme, View } from "react-native";
 import { Link } from "expo-router";
 import { Colors } from "@/constants/Colors";
 
+import ThemedView from "@/components/ThemedView";
+import ThemedText from "@/components/ThemedText";
+
 export default function About() {
   const colorScheme = useColorScheme();
   console.log(colorScheme);
   const theme = Colors[colorScheme] ?? Colors.light;
   return (
-    <View style={[styles.container, { backgroundColor: theme.background }]}>
-      <Text className="font-bold text-[18px]">About Page</Text>
+    <ThemedView
+      style={[styles.container, { backgroundColor: theme.background }]}
+    >
+      <ThemedText className="font-bold text-[18px]">About Page</ThemedText>
       <Link href="/" className="mx-2 border-b-[1px]">
-        Back Home
+        <ThemedText>Back Home</ThemedText>
       </Link>
-    </View>
+    </ThemedView>
   );
 }
 
