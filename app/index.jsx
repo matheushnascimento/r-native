@@ -7,7 +7,7 @@ import ThemedLogo from "@/components/ThemedLogo";
 import Spacer from "@/components/Spacer";
 import ThemedText from "@/components/ThemedText";
 
-export default function Home() {
+const Home = () => {
   return (
     <ThemedView style={styles.container}>
       <Spacer />
@@ -20,20 +20,33 @@ export default function Home() {
         <ThemedText>Hello, this is a card.</ThemedText>
         <ThemedText className="text-black">Testing nativewind.</ThemedText>
       </ThemedCard>
-      <Link href="/about" className="mx-2 border-b-[1px]">
-        <ThemedText>About Page</ThemedText>
+      <Link href="/login" className="mx-2 border-b-[1px]">
+        <ThemedText>Login Page</ThemedText>
       </Link>
-      <Link href="/contact" className="mx-2 border-b-[1px]">
-        <ThemedText>Contact Page</ThemedText>
+      <Link href="/register" className="mx-2 border-b-[1px]">
+        <ThemedText>Register Page</ThemedText>
       </Link>
     </ThemedView>
   );
-}
+};
+
+export default Home;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+  },
+  img: {
+    marginVertical: 20,
+  },
+  title: {
+    fontWeight: "bold",
+    fontSize: 18,
+  },
+  link: {
+    marginVertical: 10,
+    borderBottomWidth: 1,
   },
 });
