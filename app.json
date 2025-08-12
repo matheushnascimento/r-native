@@ -2,6 +2,7 @@
   "expo": {
     "name": "r-native",
     "slug": "r-native",
+    "scheme": "r-native",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,6 +14,7 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
+      "bundler": "metro",
       "supportsTablet": true
     },
     "android": {
