@@ -26,6 +26,9 @@ const Home = () => {
       <Link href="/register" className="mx-2 border-b-[1px]">
         <ThemedText>Register Page</ThemedText>
       </Link>
+      <Link href="/profile" className="mx-2 border-b-[1px]">
+        <ThemedText>Profile Page</ThemedText>
+      </Link>
     </ThemedView>
   );
 };
